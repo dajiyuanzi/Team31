@@ -29,6 +29,10 @@ else
 		<input id="password" name="password" type="password" class="input" />
 	<p/>
 	<p>
+<<<<<<< HEAD
 		<input type="submit" name="login" value="login" class="left" />
+=======
+		<input type="submit" name="submit" value="Confirm" class="left" />
+>>>>>>> origin/master
 	</p>
 </form>
