@@ -1,14 +1,16 @@
-<?php 
-$db_host= 'localhost';
-$db_username= 'root';
-$db_password= '';
-$db= 'superkarlskrona';
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "superkarlskrona";
 
-$con = mysql_connect($db_host,$db_username,$db_password) or die ("Cannot connect db: " . mysql_error());
-mysql_select_db($db,$con) or die ("Cannot connect db: " . mysql_error());
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-
-mysql_query("set names utf8");
+//mysql_query("set names utf8");
 date_default_timezone_set("Europe/Stockholm");
-
 ?>
