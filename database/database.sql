@@ -19,6 +19,7 @@ CREATE TABLE `superkarlskrona`.`topic`(
   `name` VARCHAR(250),
   `like` INT,
   `dislike` INT,
+  `color` VARCHAR(250),
   `description` VARCHAR(250),
   `code` VARCHAR(250),
   PRIMARY KEY(`tid`)

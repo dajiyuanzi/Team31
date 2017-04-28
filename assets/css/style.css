@@ -2,3 +2,9 @@
   background:	purple;
   opacity: 1;
 }
+
+.topicBox{
+  height: 100px;
+  padding: 10px;
+  margin: 0;
+}
