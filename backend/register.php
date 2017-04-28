@@ -7,16 +7,17 @@ if(isset($_POST['username'])&&isset($_POST['email'])&&isset($_POST['password']))
 	$password=$_POST['password'];
 }
 
+
 if(!empty($username))
 {
-    $conn = mysql_query("SELECT * FROM user WHERE username='$username'");
+    $conn = mysql_query("SELECT * FROM user WHERE name='$username'");
     if ($conn && mysql_num_rows($conn) > 0) 
     {
-        echo "<script type="text/javascript">alert("This username has been used! Try another.");</script>";
+        echo "<script>alert('This username has bee used! Try another!');</script>";
     }
     else 
     {
-        $sql = "INSERT INTO user(name, email, code) VALUES ('$name', '$email', '$password');";
+        $sql = "INSERT INTO user(name, email, code) VALUES ('".$username."', '".$email."', '".$password."');";
         if (!mysql_query($sql)) 
         {
             echo 'Mysql error: ' . mysql_error();
@@ -27,6 +28,7 @@ if(!empty($username))
 }
 
 ?>
+
 
 <form action="../backend/register.php" method="post">
 	<p>

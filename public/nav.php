@@ -29,7 +29,7 @@
 					<li class="divider">
 					</li>
 					<li>
-						<a href="#">Login Out</a>
+						<a href="../backend/logout.php">Login Out</a>
 					</li>
 				</ul>
 			</li>
