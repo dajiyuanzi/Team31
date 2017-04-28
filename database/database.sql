@@ -17,8 +17,8 @@ DROP TABLE IF EXISTS `superkarlskrona`.`topic`;
 CREATE TABLE `superkarlskrona`.`topic`(
   `tid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(250),
-  'like' INT,
-  'dislike' INT,
+  `like` INT,
+  `dislike` INT,
   `description` VARCHAR(250),
   `code` VARCHAR(250),
   PRIMARY KEY(`tid`)
@@ -30,8 +30,8 @@ CREATE TABLE `superkarlskrona`.`comment`(
   `cid` INT NOT NULL AUTO_INCREMENT,
   `tid` INT,
   `uid` INT,
-  'like' INT,
-  'dislike' INT,
+  `like` INT,
+  `dislike` INT,
   `comment` VARCHAR(250),
   PRIMARY KEY(`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
