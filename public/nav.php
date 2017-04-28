@@ -22,43 +22,28 @@
 			    }
 			  }
 
+				$pagePopular = "disabled";
+				$pageComment = "disabled";
+				$pageIndex = "disabled";
 
 				if ($page == "popular") {
-					echo
-					'<li class="disabled">
-						<a href="index.php">All</a>
-					</li>
-					<li class="active">
-						<a href="index.php?page=popular">Most popular</a>
-					</li>
-					<li class="disabled">
-						<a href="index.php?page=comment">Most commented</a>
-					</li>';
+						$pagePopular = "active";
 				} elseif ($page == "comment") {
-					echo
-					'<li class="disabled">
-						<a href="index.php">All</a>
-					</li>
-					<li class="disabled">
-						<a href="index.php?page=popular">Most popular</a>
-					</li>
-					<li class="active">
-						<a href="index.php?page=comment">Most commented</a>
-					</li>';
+					$pageComment = "active";
 				} else {
-					echo
-					'<li class="active">
-						<a href="index.php">All</a>
-					</li>
-					<li class="disabled">
-						<a href="index.php?page=popular">Most popular</a>
-					</li>
-					<li class="disabled">
-						<a href="index.php?page=comment">Most commented</a>
-					</li>';
+					$pageIndex = "active";
 				}
 
-
+				echo
+				'<li class="'.$pageIndex.'">
+					<a href="index.php">All</a>
+				</li>
+				<li class="'.$pagePopular.'">
+					<a href="index.php?page=popular">Most popular</a>
+				</li>
+				<li class="'.$pageComment.'">
+					<a href="index.php?page=comment">Most commented</a>
+				</li>';
 
 
 

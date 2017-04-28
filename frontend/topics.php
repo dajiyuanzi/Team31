@@ -12,7 +12,7 @@
     }
   }
 
-  echo  "".$page."";
+  echo  "( OBS! TO BE REMOVED JUST FOR CONTEXT) page is ".$page."";
 
   include_once('../database/db_con.php');
   session_start();
