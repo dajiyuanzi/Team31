@@ -1,35 +1,34 @@
+DROP DATABASE IF EXISTS superkarlskrona;
 
-create database superkarlskrona;
+CREATE DATABASE superkarlskrona;
 
-drop table if exsits 'user';
+DROP TABLE IF EXISTS `superkarlskrona`.`user`;
 
-create table user(
-    uid int AUTO_INCREMENT,
-    name varchar(250),
-    email varchar(250),
-    code varchar(250),
-    PRIMARY KEY(uid)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `superkarlskrona`.`user`(
+  `uid` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(250),
+  `email` VARCHAR(250),
+  `code` VARCHAR(250),
+  PRIMARY KEY(`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `superkarlskrona`.`topic`;
 
-DROP TABLE IF EXISTS topic;
+CREATE TABLE `superkarlskrona`.`topic`(
+  `tid` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(250),
+  `description` VARCHAR(250),
+  `code` VARCHAR(250),
+  PRIMARY KEY(`tid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE table topic (
-	tid int AUTO_INCREMENT,
-	name varchar(250),
-    description varchar(250),
-    code varchar(250),
-    PRIMARY KEY(tid)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `superkarlskrona`.`comment`;
 
-
-DROP TABLE IF EXISTS comment;
-
-CREATE table comment (
-	cid int AUTO_INCREMENT,
-    tid int,
-    uid int,
-    comment varchar(250),
-    PRIMARY KEY(cid)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `superkarlskrona`.`comment`(
+  `cid` INT NOT NULL AUTO_INCREMENT,
+  `tid` INT,
+  `uid` INT,
+  `comment` VARCHAR(250),
+  PRIMARY KEY(`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*Don't need foreign keys*/
