@@ -9,7 +9,7 @@
 			<div class="span2" style="background:yellow;">
 
 			</div>
-			<div class="span8" style="background:red;">
+			<div class="span8">
 				<?php require_once('topics.php'); ?>
 			</div>
 			<div class="span2" style="background:green;">
