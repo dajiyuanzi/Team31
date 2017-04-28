@@ -1,6 +1,19 @@
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
-<h1>Topics</h1>
 <?php
+
+
+  $page = "";
+
+  if (isset($_GET['page']))
+  {
+    if ($_GET['page'] != "")
+    {
+      $page = $_GET['page'];
+    }
+  }
+
+  echo  "".$page."";
+
   include_once('../database/db_con.php');
   session_start();
 

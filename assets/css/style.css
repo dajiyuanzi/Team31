@@ -1,5 +1,5 @@
 .navbg{
-  background:	purple;
+  background:	white;
   opacity: 1;
 }
 
@@ -7,4 +7,8 @@
   height: 100px;
   padding: 10px;
   margin: 0;
+}
+
+.title {
+  text-align: center;
 }
