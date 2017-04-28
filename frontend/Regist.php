@@ -4,22 +4,22 @@ require_once ('Regist.php');
 <head>
 <meta http-equiv="Content-Type" content="text/html" />
 <title>Register</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 <script language="javascript">
 function chk(theForm){
 	if (theForm.member_user.value.replace(/(^\s*)|(\s*$)/g, "") == ""){
 		alert("The user name must be filled in！");
-		theForm.member_user.focus();   
-		return (false);   
-	}		
-	
+		theForm.member_user.focus();
+		return (false);
+	}
+
 	if (theForm.member_password.value.replace(/(^\s*)|(\s*$)/g, "") == ""){
 		alert("The password must be filled in！");
-		theForm.member_password.focus();   
-		return (false);   
-	}	
-	}	
-		 
+		theForm.member_password.focus();
+		return (false);
+	}
+	}
+
 </script>
 
 </head>

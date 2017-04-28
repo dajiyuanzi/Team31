@@ -1,3 +1,19 @@
-.text { font-family: "ËÎÌå"; font-size: 12px} .bg { background-image: url(bg.jpg); 
-background-repeat: repeat-y} .pic { background-image: url(01.gif); background-repeat: 
-no-repeat} .button { background-image: url(button.gif); background-repeat: repeat} 
+.text {
+  font-family: "ï¿½ï¿½ï¿½ï¿½";
+  font-size: 12px
+}
+
+.bg {
+  background-image: url(bg.jpg);
+  background-repeat: repeat-y
+}
+
+.pic {
+  background-image: url(01.gif);
+  background-repeat: no-repeat
+}
+
+.button {
+  background-image: url(button.gif);
+  background-repeat: repeat
+}

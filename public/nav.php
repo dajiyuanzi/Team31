@@ -1,9 +1,4 @@
-<style type="text/css">
-	.navbg{
-	background:	purple; 
-	opacity:0.4;
-	}
-</style>
+<link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
 <div class="row-fluid">
 	<div class="span12">
@@ -35,4 +30,4 @@
 			</li>
 		</ul>
 	</div>
-</div>	
+</div>
