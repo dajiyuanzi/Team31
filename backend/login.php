@@ -3,9 +3,9 @@ require_once('../database/db_con.php');
 
 if(isset($_POST['username'])&&isset($_POST['password'])){
 	$sql="select * from user where name='".$_POST['username']."' and code=".$_POST['password'].";";
-	$result=mysql_query($sql) or die('MySQL Error: ' . mysqli_error());
-	$row=mysql_fetch_array($result);
-	echo $row;
+	$result=$con->query($sql) or die('MySQL Error: ' . mysqli_error());
+	$row=$result->fetch_assoc();
+
 	if (!$row) {
 		echo "<script>alert('Wrong username or password');</script>";
 	}
@@ -34,6 +34,5 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 	<p/>
 	<p>
 		<input type="submit" name="login" value="login" class="left" />
-		<input type="submit" name="submit" value="Confirm" class="left" />
 	</p>
 </form>

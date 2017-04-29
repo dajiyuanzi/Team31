@@ -11,7 +11,7 @@
 
 			</div>
 			<div class="span8">-->
-				<?php require_once('topics.php'); ?>
+				<?php require_once('../backend/topics.php'); ?>
 			<!--</div>
 			<div class="span2" style="background:green;">
 
