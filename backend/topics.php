@@ -24,7 +24,8 @@
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
       echo "<div class='topicBox' style='background-color:".$row["color"].";' >";
-      echo "  <p><a href='../frontend/comment.php?tid=".$row['tid']."'>".$row["description"]."</a><br>Likes: ".$row["like"]." Dislikes: ".$row["dislike"]."</p>";
+      echo "  <p><a href='../frontend/comment.php?tid=".$row['tid']."'>".$row["description"]."</a><br><span id='liketid".$row['like']."'>Likes: ".$row["like"]."</span> Dislikes: ".$row["dislike"]."</p>";
+      echo "  <button style='background-color: yellow' onclick='like(".$row['tid'].");'>Like</button>";
       echo "</div>";
     }
   } else {
