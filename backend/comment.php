@@ -6,7 +6,7 @@ require_once('../public/login_check.php');
 $tid=$_GET['tid'];
 $uid=$_SESSION['uid'];
 
-$result = $con->query("select comment from comment where tid='".$tid."';");
+$result = $con->query("select `comment` from comment where tid='".$tid."';");
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
