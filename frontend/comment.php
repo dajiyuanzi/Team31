@@ -10,7 +10,11 @@
 	<?php require_once('../backend/comment.php'); ?>
 
 	<legend>Launch Comment</legend>
+<<<<<<< HEAD
 	<form action="../frontend/comment.php?tid=<?php echo $tid; ?>" method="post">
+=======
+	<form action="../backend/comment.php" method="post">
+>>>>>>> origin/master
 		<p>
 			<label for="comment" class="label">Your Comment</label>
 			<input id="comment" name="comment" type="input" class="input" />
