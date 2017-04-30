@@ -53,10 +53,10 @@
 				<a href="#" data-toggle="dropdown" class="dropdown-toggle">Drop<strong class="caret"></strong></a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="register.php">Register</a>
+						<a href="../backend/register.php">Register</a>
 					</li>
 					<li>
-						<a href="profile.php">Profile</a>
+						<a href="../backend/login.php">Login</a>
 					</li>
 					<li class="divider">
 					</li>
