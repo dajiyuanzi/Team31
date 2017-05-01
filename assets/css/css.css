@@ -9,8 +9,8 @@
 }
 
 .pic {
-  background-image: url(01.gif);
-  background-repeat: no-repeat
+	background-image: url(../images/01.gif);
+	background-repeat: no-repeat
 }
 
 .button {
