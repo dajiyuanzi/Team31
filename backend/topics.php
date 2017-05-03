@@ -55,7 +55,7 @@
       $popularity = $row["like"] - $row["dislike"];
       echo "<div class='topicBox' style='background-color:".$row["color"].";' >";
       echo "  <p><a href='../frontend/comment.php?tid=".$row['tid']."'>".$row["description"]."</a><br>Likes: <span id='liketid".$row['tid']."'>".$row["like"]."</span> Dislikes: <span id='disliketid".$row['tid']."'>".$row["dislike"]."</span> Popularity: <span id='popularityid".$row['tid']."'>$popularity</span></p>";
-      echo "  <button style='background-color: yellow' onclick='like(".$row['tid'].");'>Like</button>";
+      echo "  <button style='background-color: green' onclick='like(".$row['tid'].");'>Like</button>";
       echo "  <button style='background-color: red' onclick='dislike(".$row['tid'].");'>Dislike</button>";
       echo "</div>";
     }

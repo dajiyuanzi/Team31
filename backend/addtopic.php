@@ -5,30 +5,44 @@ include_once('../database/db_con.php');
 
 //$uid=$_SESSION['uid'];
 
-if(isset($_POST['inputtext'])&&!empty($_POST['inputtext'])){
-	$topic=$_POST['inputtext'];
 
-    $con->query("SET @return = ''");
+if(isset($_POST['inputtext'])){
+	if(isset($_COOKIE["setcookie".$_POST['inputtext'].""])){//judge cookie to prevent dupicate submission
+    	//echo "Have Done";
+    } else {
 
-    $sql = "CALL add_topic('" .$topic. "', @result);";
-    //echo $sql. "<br>";
-    if ($con->query($sql) === TRUE) {
+  if(isset($_POST['inputtext'])&&!empty($_POST['inputtext'])){
+  	$topic=$_POST['inputtext'];
 
-      $select = 'SELECT @result;';
-      $res = $con->query($select);
-      if ($res->num_rows > 0) {
-        while($row = $res->fetch_assoc()) {
-          echo "<p> ".$row["@result"]. "</p>";
+      $con->query("SET @return = ''");
+
+      $sql = "CALL add_topic('" .$topic. "', @result);";
+      //echo $sql. "<br>";
+      if ($con->query($sql) === TRUE) {
+
+        $select = 'SELECT @result;';
+        $res = $con->query($select);
+        if ($res->num_rows > 0) {
+          while($row = $res->fetch_assoc()) {
+            echo "<p> ".$row["@result"]. "</p>";
+          }
+        } else {
+          //echo "Error: " . $select . "<br>" . $con->error;
         }
+
       } else {
         //echo "Error: " . $select . "<br>" . $con->error;
       }
 
-    } else {
-        //echo "Error: " . $sql . "<br>" . $con->error;
-    }
-}
+    setcookie("setcookie".$_POST['inputtext']."", "1", time()+72000000); //set cookie to prevent dupicate submission
+  }
 
+
+
+    }
+  } else {
+    //die('MySQL Error: ' . mysqli_error());
+  }
 
 
 
