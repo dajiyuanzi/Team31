@@ -7,12 +7,29 @@ include_once('../database/db_con.php');
 
 if(isset($_POST['inputtext'])&&!empty($_POST['inputtext'])){
 	$topic=$_POST['inputtext'];
-	$sql = "INSERT INTO topic(description) VALUES ('".$topic."');";
-    if (!$con->query($sql)) {
-        echo 'Mysql error: ' . mysql_error();
-        exit;
+
+    $con->query("SET @return = ''");
+
+    $sql = "CALL add_topic('" .$topic. "', @result);";
+    //echo $sql. "<br>";
+    if ($con->query($sql) === TRUE) {
+
+      $select = 'SELECT @result;';
+      $res = $con->query($select);
+      if ($res->num_rows > 0) {
+        while($row = $res->fetch_assoc()) {
+          echo "<p> ".$row["@result"]. "</p>";
+        }
+      } else {
+        //echo "Error: " . $select . "<br>" . $con->error;
+      }
+
+    } else {
+        //echo "Error: " . $sql . "<br>" . $con->error;
     }
-    //header("Location:../frontend/comment.php?tid=".$tid."");
 }
+
+
+
 
 ?>

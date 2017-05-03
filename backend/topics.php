@@ -6,9 +6,11 @@
 
 <div style="display:none;" class="topicform">
 
-  <form  action="index.php" name="topicfrom"  method="POST">
-   <label for="inputText" class="label">Add your topic</label>
-   <textarea id="inputtext" name="inputText" style="width:100%;"rows="4" cols="50"></textarea>
+  <?php require_once('../backend/addtopic.php'); ?>
+
+  <form  action="index.php" name="topicfrom" id="topicform" method="POST">
+   <label for="inputtext" class="label">Add your topic</label>
+   <textarea form="topicform" id="inputtext" name="inputtext" style="width:100%;"rows="4" cols="50"></textarea>
    <input type="submit" value="Submit"></input>
    <button type="cancel">Cancel</button>
   </form>
@@ -30,7 +32,7 @@
   echo  "( OBS! TO BE REMOVED JUST FOR CONTEXT) page is ".$page."";
 
   include_once('../database/db_con.php');
-  session_start();
+  //session_start();
 
   $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid DESC";
 
