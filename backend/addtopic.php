@@ -5,8 +5,6 @@ include_once('../database/db_con.php');
 //include_once('../public/login_check.php');
 //$uid=$_SESSION['uid'];
 
-session_start();
-
 if (!isset($_SESSION['username'])){
   echo "<script>alert('Please Login! fitstly');</script>";
 }
@@ -48,6 +46,9 @@ else{
   } else {
     //die('MySQL Error: ' . mysqli_error());
   }
+
 }
+
+
 
 ?>
