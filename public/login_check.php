@@ -4,7 +4,7 @@
 
  if (!isset($_SESSION['username'])){
  	echo "<script>alert('Please Login! fitstly');</script>";
- 	header("refresh:3; url=../frontend/index.php");
+ 	header("refresh:2; url=../frontend/index.php");
  }
 
 

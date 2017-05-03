@@ -1,13 +1,12 @@
 
 <?php
 include_once('../database/db_con.php');
-//require_once('../public/login_check.php');
 
 //$uid=$_SESSION['uid'];
 
 
 if(isset($_POST['inputtext'])){
-	if(isset($_COOKIE["setcookie".$_POST['inputtext'].""])){//judge cookie to prevent dupicate submission
+  	if(isset($_COOKIE["setcookie".$_POST['inputtext'].""])){//judge cookie to prevent dupicate submission
     	//echo "Have Done";
     } else {
 
