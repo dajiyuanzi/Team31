@@ -17,8 +17,8 @@ DROP TABLE IF EXISTS `superkarlskrona`.`topic`;
 CREATE TABLE `superkarlskrona`.`topic`(
   `tid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(250),
-  `like` INT,
-  `dislike` INT,
+  `like` INT DEFAULT '0',
+  `dislike` INT DEFAULT '0',
   `color` VARCHAR(250),
   `description` VARCHAR(250),
   `code` VARCHAR(250),
