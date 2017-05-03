@@ -1,25 +1,23 @@
+<html>
+
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript">
-  function addTopic(){
 
-  }
+<button class="addtopic" onclick="$('.topicform').css('display', 'block'); $('.addtopic').css('display', 'none');">Add topic</button>
 
+<div style="display:none;" class="topicform">
+  Add your topic
+  <form  name="topicfrom"  method="POST"  onsubmit="myFunction()" >
+   <textarea style="width:100%;"rows="4" cols="50"></textarea>
+   <input type="submit" value="submit">
+   <button type="cancel" value="cancel">cancel</button>
+  </form>
+</div>
 
-</script>
-
-<button onclick='addTopic();'>Add topic</button>
-<form name="topicfrom"  method="POST"  onsubmit="myFunction()" >
- <input type="topic" name="topic" id="topic">
- <input type="submit" value="submit">
-</form>
 
 <?php
 
 
-
-
-
-
-
 ?>
+
+</html>
