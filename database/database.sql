@@ -25,6 +25,9 @@ CREATE TABLE `superkarlskrona`.`topic`(
   PRIMARY KEY(`tid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+alter table topic add COLUMN uid int; /*VITAL!!!!!!S*/
+
+
 DROP TABLE IF EXISTS `superkarlskrona`.`comment`;
 
 CREATE TABLE `superkarlskrona`.`comment`(

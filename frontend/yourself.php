@@ -11,7 +11,7 @@
 	?>
 	<div class="row-fluid">
 	<!--<form action="index.php"><input type="submit" value="Go back" /></form>-->
-	<button><a href="index.php">Go Back</a></button>
+	<button><a href="../frontend/index.php">Go Back</a></button>
 	<br/><br/>
 
 		<?php require_once('../backend/yourself.php'); ?>

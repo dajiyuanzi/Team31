@@ -2,6 +2,8 @@
 <?php
 include_once('../database/db_con.php');
 
+session_start();
+
 //include_once('../public/login_check.php');
 //$uid=$_SESSION['uid'];
 
@@ -19,7 +21,7 @@ else{
 
       $con->query("SET @return = ''");
 
-      $sql = "CALL add_topic('" .$topic. "', @result);";
+      $sql = "CALL add_topic('" .$topic. "', '".$_SESSION['uid']."', @result);"; // add uid for user to view own bulletin board-Ji Yuan
       //echo $sql. "<br>";
       if ($con->query($sql) === TRUE) {
 

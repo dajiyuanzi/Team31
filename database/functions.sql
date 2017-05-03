@@ -3,6 +3,7 @@ DROP PROCEDURE IF EXISTS add_topic;
 DELIMITER //
 CREATE PROCEDURE add_topic (
 	  _topic VARCHAR(250),
+      _uid int,
     OUT output VARCHAR(500)
 )
 BEGIN
@@ -14,7 +15,7 @@ BEGIN
 
             SET _color = (SELECT color FROM color ORDER BY RAND() LIMIT 1);
 
-						INSERT INTO topic		(description, color) VALUES  (_topic, _color);
+						INSERT INTO topic		(description, color, uid) VALUES  (_topic, _color, _uid);
 
 						SET output = "Topic added!";
 
@@ -28,5 +29,5 @@ END;
 DELIMITER ;
 
 -- test proc
- CALL add_topic('message', @return);
+ CALL add_topic('message', 1, @return);
  SELECT @return;
