@@ -53,6 +53,11 @@
 				<a href="#" data-toggle="dropdown" class="dropdown-toggle">Drop<strong class="caret"></strong></a>
 				<ul class="dropdown-menu">
 					<li>
+						<a href="../frontend/logmode.html">Main frame</a>
+					</li>
+					<li class="divider">
+					</li>
+					<li>
 						<a href="../backend/register.php">Register</a>
 					</li>
 					<li>
