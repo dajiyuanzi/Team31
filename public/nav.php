@@ -66,6 +66,9 @@
 					<li>
 						<a href="../frontend/yourself.php">Yourself</a>
 					</li>
+					<li>
+						<a href="../frontend/profile.php">Profile</a>
+					</li>
 					<li class="divider">
 					</li>
 					<li>

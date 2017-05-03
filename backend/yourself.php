@@ -5,7 +5,7 @@ require_once('../public/login_check.php');
 
 $uid=$_SESSION['uid'];
 
-$result= $result = $con->query("select * from topic where uid=".$uid.";");
+$result = $con->query("select * from topic where uid=".$uid.";");
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {

@@ -15,6 +15,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
         $_SESSION['username']=$row['name'];
         $_SESSION['email']=$row['email'];
         $_SESSION['uid']=$row['uid'];
+        $_SESSION['password']=$row['code'];
         header("Location:../frontend/index.php");
 		}	
 	}
