@@ -40,7 +40,6 @@
 
     //SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid";
   } elseif ($page == "popular") {
-    echo"hi";
     $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike`, (`like`-`dislike`) FROM `topic` ORDER BY 6 DESC";
   } else {
     $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid DESC";
