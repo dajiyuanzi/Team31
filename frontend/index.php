@@ -6,11 +6,11 @@
 		function like(tid){
 			if (window.XMLHttpRequest)
 			{
-				// IE7+, Firefox, Chrome, Opera, Safari 
+				// IE7+, Firefox, Chrome, Opera, Safari
 				x=new XMLHttpRequest();
 			}
 			else
-			{	
+			{
 				//IE6, IE5
 				x=new ActiveXObject("Microsoft.XMLHTTP");
 			}
@@ -29,11 +29,11 @@
 		function dislike(tid){
 			if (window.XMLHttpRequest)
 			{
-				// IE7+, Firefox, Chrome, Opera, Safari 
+				// IE7+, Firefox, Chrome, Opera, Safari
 				x=new XMLHttpRequest();
 			}
 			else
-			{	
+			{
 				//IE6, IE5
 				x=new ActiveXObject("Microsoft.XMLHTTP");
 			}
@@ -60,6 +60,7 @@
 
 			</div>
 			<div class="span8">-->
+				<?php require_once('../backend/addtopic.php'); ?>
 				<?php require_once('../backend/topics.php'); ?>
 			<!--</div>
 			<div class="span2" style="background:green;">
