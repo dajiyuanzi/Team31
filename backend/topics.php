@@ -29,19 +29,30 @@
     }
   }
 
+
   echo  "( OBS! TO BE REMOVED JUST FOR CONTEXT) page is ".$page."";
 
   include_once('../database/db_con.php');
   //session_start();
 
-  $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid DESC";
+  if ($page == "comment") {
+    $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid";
+  } elseif ($page == "popular") {
+    echo"hi";
+    $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike`, (`like`-`dislike`) FROM `topic` ORDER BY 6 DESC";
+  } else {
+    $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid DESC";
+  }
+
+  //$sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid DESC";
 
   $result = $con->query($sql);
 
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
+      $popularity = $row["like"] - $row["dislike"];
       echo "<div class='topicBox' style='background-color:".$row["color"].";' >";
-      echo "  <p><a href='../frontend/comment.php?tid=".$row['tid']."'>".$row["description"]."</a><br>Likes: <span id='liketid".$row['tid']."'>".$row["like"]."</span> Dislikes: <span id='disliketid".$row['tid']."'>".$row["dislike"]."</span></p>";
+      echo "  <p><a href='../frontend/comment.php?tid=".$row['tid']."'>".$row["description"]."</a><br>Likes: <span id='liketid".$row['tid']."'>".$row["like"]."</span> Dislikes: <span id='disliketid".$row['tid']."'>".$row["dislike"]."</span> Popularity: <span id='popularityid".$row['tid']."'>$popularity</span></p>";
       echo "  <button style='background-color: yellow' onclick='like(".$row['tid'].");'>Like</button>";
       echo "  <button style='background-color: red' onclick='dislike(".$row['tid'].");'>Dislike</button>";
       echo "</div>";
