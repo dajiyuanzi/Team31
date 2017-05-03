@@ -3,7 +3,8 @@
  session_start();
 
  if (!isset($_SESSION['username'])){
- 	header("Location:../frontend/index.php");
+ 	echo "<script>alert('Please Login! fitstly');</script>";
+ 	header("refresh:3; url=../frontend/index.php");
  }
 
 
