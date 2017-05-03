@@ -14,7 +14,7 @@ if(isset($_POST['tid'])){
 		$sql="update topic set `like`='".$row['like']."' where tid='".$_POST['tid']."';";
 		$result=$con->query($sql) or die('MySQL Error: ' . mysqli_error());
 		
-		setcookie("setcookie".$_POST['tid']."", "1", time()+72000000); //set cookie to prevent dupicate submission
+		setcookie("setcookie".$_POST['tid']."", "1", time()+72000000); //set cookie to prevent dupicate submission-Yuan Ji achieve this logic for fixing bugs
 		
 		echo $row['like'];
     }

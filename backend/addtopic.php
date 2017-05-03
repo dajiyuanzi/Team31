@@ -2,16 +2,22 @@
 <?php
 include_once('../database/db_con.php');
 
+//include_once('../public/login_check.php');
 //$uid=$_SESSION['uid'];
 
+session_start();
 
-if(isset($_POST['inputtext'])){
-  	if(isset($_COOKIE["setcookie".$_POST['inputtext'].""])){//judge cookie to prevent dupicate submission
-    	//echo "Have Done";
+if (!isset($_SESSION['username'])){
+  echo "<script>alert('Please Login! fitstly');</script>";
+}
+else{
+  if(isset($_POST['inputtext'])){
+    if(isset($_COOKIE["setcookie".$_POST['inputtext'].""])){//judge cookie to prevent dupicate submission
+      //echo "Have Done";
     } else {
 
   if(isset($_POST['inputtext'])&&!empty($_POST['inputtext'])){
-  	$topic=$_POST['inputtext'];
+    $topic=$_POST['inputtext'];
 
       $con->query("SET @return = ''");
 
@@ -42,7 +48,6 @@ if(isset($_POST['inputtext'])){
   } else {
     //die('MySQL Error: ' . mysqli_error());
   }
-
-
+}
 
 ?>

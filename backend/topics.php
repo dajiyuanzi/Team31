@@ -1,23 +1,6 @@
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
 
-<div class="addtopicbutton">
-<button class="addtopic" onclick="$('.topicform').css('display', 'block'); $('.addtopicbutton').css('display', 'none');">Add topic</button>
-<br><br>
-</div>
-
-<div style="display:none;" class="topicform">
-
-  <?php require_once('../backend/addtopic.php'); ?>
-
-  <form  action="index.php" name="topicfrom" id="topicform" method="POST">
-   <label for="inputtext" class="label">Add your topic</label>
-   <textarea form="topicform" id="inputtext" name="inputtext" style="width:100%;"rows="4" cols="50"></textarea>
-   <input type="submit" value="Submit"></input>
-   <button type="cancel" onclick="$('.topicform').css('display', 'none'); $('.addtopicbutton').css('display', 'block');">Cancel</button>
-  </form>
-</div>
-
 <?php
 
 
