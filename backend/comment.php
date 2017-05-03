@@ -38,8 +38,8 @@ if ($result->num_rows > 0) {
     }
 }
 else {
-   	echo "<div class='topicBox' style='background-color:yellow;' >";
-    echo "  <p>No Comment</p><br>";
+   	echo "<div class='topicBox' style='background-color:white;' >";
+    echo "  <p>No Comments</p><br>";
     echo "</div>";
 }
 

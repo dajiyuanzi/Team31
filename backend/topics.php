@@ -1,9 +1,11 @@
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
 
+<div class="addtopicbutton">
+<button class="addtopic" onclick="$('.topicform').css('display', 'block'); $('.addtopicbutton').css('display', 'none');">Add topic</button>
+<br><br>
+</div>
 
-<button class="addtopic" onclick="$('.topicform').css('display', 'block'); $('.addtopic').css('display', 'none');">Add topic</button>
-<br>
 <div style="display:none;" class="topicform">
 
   <?php require_once('../backend/addtopic.php'); ?>
@@ -12,7 +14,7 @@
    <label for="inputtext" class="label">Add your topic</label>
    <textarea form="topicform" id="inputtext" name="inputtext" style="width:100%;"rows="4" cols="50"></textarea>
    <input type="submit" value="Submit"></input>
-   <button type="cancel">Cancel</button>
+   <button type="cancel" onclick="$('.topicform').css('display', 'none'); $('.addtopicbutton').css('display', 'block');">Cancel</button>
   </form>
 </div>
 
@@ -30,13 +32,13 @@
   }
 
 
-  echo  "( OBS! TO BE REMOVED JUST FOR CONTEXT) page is ".$page."";
-
   include_once('../database/db_con.php');
   //session_start();
 
   if ($page == "comment") {
-    $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid";
+    $sql = 	"SELECT topic.tid, topic.color, topic.description, topic.like, topic.dislike, COUNT(COMMENT.tid) AS comments FROM `topic` LEFT JOIN `comment` ON topic.tid = COMMENT.tid GROUP BY topic.tid ORDER BY comments DESC";
+
+    //SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid";
   } elseif ($page == "popular") {
     echo"hi";
     $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike`, (`like`-`dislike`) FROM `topic` ORDER BY 6 DESC";
