@@ -64,7 +64,7 @@
 						<a href="../backend/login.php">Login</a>
 					</li>
 					<li>
-						<a href="../frontend/own.php">Yourself</a>
+						<a href="../frontend/yourself.php">Yourself</a>
 					</li>
 					<li class="divider">
 					</li>
