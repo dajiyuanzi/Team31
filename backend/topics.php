@@ -1,4 +1,19 @@
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+
+
+<button class="addtopic" onclick="$('.topicform').css('display', 'block'); $('.addtopic').css('display', 'none');">Add topic</button>
+
+<div style="display:none;" class="topicform">
+
+  <form  action="index.php" name="topicfrom"  method="POST">
+   <label for="inputText" class="label">Add your topic</label>
+   <textarea id="inputtext" name="inputText" style="width:100%;"rows="4" cols="50"></textarea>
+   <input type="submit" name="SubmitButton"/>
+   <button type="cancel" value="cancel">cancel</button>
+  </form>
+</div>
+
 <?php
 
 
