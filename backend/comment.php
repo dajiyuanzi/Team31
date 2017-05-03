@@ -1,3 +1,51 @@
+<script type="text/javascript">
+  function like(tid){
+    if (window.XMLHttpRequest)
+    {
+      // IE7+, Firefox, Chrome, Opera, Safari
+      x=new XMLHttpRequest();
+    }
+    else
+    {
+      //IE6, IE5
+      x=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    x.onreadystatechange=function()
+    {
+      if (x.readyState==4 && x.status==200)
+      {
+        document.getElementById("liketid"+tid).innerHTML=x.responseText;
+      }
+    }
+    x.open("POST","../backend/like.php",true);
+    x.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        x.send("tid="+tid);
+  }
+
+  function dislike(tid){
+    if (window.XMLHttpRequest)
+    {
+      // IE7+, Firefox, Chrome, Opera, Safari
+      x=new XMLHttpRequest();
+    }
+    else
+    {
+      //IE6, IE5
+      x=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    x.onreadystatechange=function()
+    {
+      if (x.readyState==4 && x.status==200)
+      {
+        document.getElementById("disliketid"+tid).innerHTML=x.responseText;
+      }
+    }
+    x.open("POST","../backend/dislike.php",true);
+    x.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        x.send("tid="+tid);
+  }
+</script>
+
 
 <?php
 include_once('../database/db_con.php');
@@ -14,7 +62,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo "<div class='topicBox' style='background-color:".$row["color"].";' >";
     echo "  <p><a href='../frontend/comment.php?tid=".$row['tid']."'>".$row["description"]."</a><br>Likes: <span id='liketid".$row['tid']."'>".$row["like"]."</span> Dislikes: <span id='disliketid".$row['tid']."'>".$row["dislike"]."</span></p>";
-    echo "  <button style='background-color: yellow' onclick='like(".$row['tid'].");'>Like</button>";
+    echo "  <button style='background-color: green' onclick='like(".$row['tid'].");'>Like</button>";
     echo "  <button style='background-color: red' onclick='dislike(".$row['tid'].");'>Dislike</button>";
     echo "</div>";
     $color = $row["color"];
