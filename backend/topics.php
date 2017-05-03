@@ -32,7 +32,7 @@
   include_once('../database/db_con.php');
   session_start();
 
-  $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic`";
+  $sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` ORDER BY tid DESC";
 
   $result = $con->query($sql);
 
