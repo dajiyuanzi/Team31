@@ -37,3 +37,16 @@ CREATE TABLE `superkarlskrona`.`comment`(
   PRIMARY KEY(`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*Don't need foreign keys*/
+
+
+CREATE TABLE `superkarlskrona`.`color`(
+  `colorid` INT NOT NULL AUTO_INCREMENT,
+  `color` VARCHAR(250),
+  PRIMARY KEY(`colorid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `color`(`color`) VALUES
+("lightpink"),
+("lightblue"),
+("lightgreen"),
+("yellow")
