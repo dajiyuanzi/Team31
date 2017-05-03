@@ -9,8 +9,8 @@
   <form  action="index.php" name="topicfrom"  method="POST">
    <label for="inputText" class="label">Add your topic</label>
    <textarea id="inputtext" name="inputText" style="width:100%;"rows="4" cols="50"></textarea>
-   <input type="submit" name="SubmitButton"/>
-   <button type="cancel" value="cancel">cancel</button>
+   <input type="submit" value="Submit"></input>
+   <button type="cancel">Cancel</button>
   </form>
 </div>
 
