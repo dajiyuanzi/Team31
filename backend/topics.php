@@ -3,7 +3,7 @@
 
 
 <button class="addtopic" onclick="$('.topicform').css('display', 'block'); $('.addtopic').css('display', 'none');">Add topic</button>
-
+<br>
 <div style="display:none;" class="topicform">
 
   <?php require_once('../backend/addtopic.php'); ?>

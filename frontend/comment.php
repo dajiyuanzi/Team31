@@ -15,11 +15,13 @@
 
 	<?php require_once('../backend/comment.php'); ?>
 
+	<br>
+	<br>
 	<legend>Launch Comment</legend>
 	<form action="../frontend/comment.php?tid=<?php echo $tid; ?>" method="post">
 		<p>
 			<label for="comment" class="label">Your Comment</label>
-			<input id="comment" name="comment" type="input" class="input" />
+			<textarea id="comment" name="comment" type="input" class="input" style="width:100%;"rows="4" cols="50"></textarea>
 		<p/>
 		<p>
 			<input type="submit" name="login" value="Launch Comment" class="left" />
