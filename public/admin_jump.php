@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if($_SESSION['username']=="admin"){
+if(isset($_SESSION['username'])&&$_SESSION['username']=="admin"){
 	echo "<li><a href='../frontend/admin.php'>Admin</a></li>";
 }
 
