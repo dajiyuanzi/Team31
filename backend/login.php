@@ -40,5 +40,6 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 	<p/>
 	<p>
 		<input type="submit" name="login" value="login" class="left" />
+        <input type='button' value="regist" onclick="Regist.php"/>
 	</p>
 </form>
