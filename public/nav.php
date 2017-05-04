@@ -69,6 +69,7 @@
 					<li>
 						<a href="../frontend/profile.php">Profile</a>
 					</li>
+					<?php require_once('../public/admin_jump.php'); ?>
 					<li class="divider">
 					</li>
 					<li>

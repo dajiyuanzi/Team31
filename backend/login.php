@@ -11,12 +11,17 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 	}
 	else{
 		if(!isset($_SESSION)){
-		session_start();
-        $_SESSION['username']=$row['name'];
-        $_SESSION['email']=$row['email'];
-        $_SESSION['uid']=$row['uid'];
-        $_SESSION['password']=$row['code'];
-        header("Location:../frontend/index.php");
+			session_start();
+	        $_SESSION['username']=$row['name'];
+	        $_SESSION['email']=$row['email'];
+	        $_SESSION['uid']=$row['uid'];
+	        $_SESSION['password']=$row['code'];
+	        if($_SESSION['username']=="admin"){
+	        	header("Location:../frontend/admin.php");
+	        }
+	        else{
+	        	header("Location:../frontend/index.php");
+	        }
 		}	
 	}
 }
