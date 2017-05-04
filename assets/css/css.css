@@ -4,8 +4,8 @@
 }
 
 .bg {
-  background-image: url(bg.jpg);
-  background-repeat: repeat-y
+	background-image: url(../images/bg.jpg);
+	background-repeat: repeat-y;
 }
 
 .pic {
@@ -14,6 +14,6 @@
 }
 
 .button {
-  background-image: url(button.gif);
-  background-repeat: repeat
+	background-image: url(../images/button.gif);
+	background-repeat: no-repeat
 }
