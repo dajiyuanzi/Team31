@@ -17,6 +17,7 @@ if ($result->num_rows > 0) {
 if(isset($_POST['tid'])){
 	@$con->query("delete from topic where tid='".$_POST['tid']."';") or die('MySQL Error: ' . mysqli_error());
 	@$con->query("delete from comment where tid='".$_POST['tid']."';") or die('MySQL Error: ' . mysqli_error());
+	echo "<script language=JavaScript> location.replace(location.href);</script>";
 }
 
 ?>

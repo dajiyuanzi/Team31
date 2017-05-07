@@ -53,6 +53,11 @@ function validate(){
  	alert("The password should be less than 20!");
      return false;
  } 
+
+ if(password.value!=password2.value){
+ 	alert("The password input should be same!");
+    return false;
+ }
  
   if(email.value.length < 1){
     
@@ -61,11 +66,12 @@ function validate(){
     
  } else if(email.value.length > 20){
  
+ 	input.password="";
  	alert("The email should be less than 20!");
-     return false;
+    return false;
  }
  
-   if(phonenumber.value.length < 1){
+   /*if(phonenumber.value.length < 1){
     
      alert("Enter your new phonenumber please!");
      return false;
@@ -77,7 +83,7 @@ function validate(){
  }
    
     return true;
- }
+ }*/
  
 </script>
 
@@ -86,7 +92,7 @@ function validate(){
 
 		<br>
 		<br>
-		<legend>Launch Comment</legend>
+		<legend>Alter Profile</legend>
 		<form method="post" action="../frontend/profile.php">
 			<p>
 				<label for="username" class="label">New User Name:</label>
@@ -103,11 +109,11 @@ function validate(){
             <p>
 				<label for="email" class="label">New Email</label>
 				<input id="email" name="email" type="email" class="input" />
-		  <p/>
-            <p>
+		  	<p/>
+            <!--<p>
 				<label for="phonenumber" class="label">New Phone number</label>
 				<input id="phonenumber" name="phonenumber" type="phonenumber" class="input" />
-			<p/>
+			<p/>-->
 			<p>
 				<input type="submit" name="profile" value="Alter" class="left" />
 			</p>
