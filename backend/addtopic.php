@@ -2,7 +2,7 @@
 <?php
 include_once('../database/db_con.php');
 
-session_start();
+@session_start();
 
 //include_once('../public/login_check.php');
 //$uid=$_SESSION['uid'];

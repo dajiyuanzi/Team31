@@ -20,7 +20,7 @@
 
 		<br>
 		<br>
-		<legend>Launch Comment</legend>
+		<legend>Delete Comment</legend>
 		<form method="post" action="../frontend/admin.php">
 			<p>
 				<label for="username" class="label">ID of Topic to Delete:</label>
