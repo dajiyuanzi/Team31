@@ -73,7 +73,7 @@ CREATE TABLE `superkarlskrona`.`application`(
   `aid` INT NOT NULL AUTO_INCREMENT,
   `description` VARCHAR(250),
   `contact` VARCHAR(250),
-  `uid` int,
+  `uid` int, /*This uif belongs to the user who applies the room, rather than publish it!*/
   `rid` int,
   PRIMARY KEY(`aid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
