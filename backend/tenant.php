@@ -16,10 +16,16 @@ if(isset($_GET['act'])&&$_GET['act']=="publish"){
 }
 elseif(isset($_GET['act'])&&$_GET['act']=="apply") {
 	if(isset($_POST['description'])&&isset($_POST['contact'])&&isset($_POST['rid'])&&isset($_SESSION['uid'])){
-		$sql="insert into application(description, contact, rid, uid) values('".$_POST['description']."', '".$_POST['contact']."', '".$_POST['rid']."', '".$_SESSION['uid']."');";
-		$con->query($sql);
-		unset($_GET['act']);
-		echo "<script language=JavaScript> location.replace(location.href);</script>";
+		$result = $con->query("select * from room where rid='".$_POST['rid']."';");
+		if($result->num_rows > 0){
+			$sql="insert into application(description, contact, rid, uid) values('".$_POST['description']."', '".$_POST['contact']."', '".$_POST['rid']."', '".$_SESSION['uid']."');";
+			$con->query($sql);
+			unset($_GET['act']);
+			echo "<script language=JavaScript> location.replace(location.href);</script>";
+		}
+		else{
+			echo "<script>alert('Please Choose Available Room ID');</script>";
+		}
 	}
 	else{
 		echo "<script>alert('Please Fill Form');</script>";

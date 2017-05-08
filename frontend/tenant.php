@@ -25,7 +25,6 @@
 						}
 						else{
 							echo "
-							
 									<p>
 										<label for='address' class='label'>Address</label>
 										<input type='text' name='addres' value='Address' class='left' />
