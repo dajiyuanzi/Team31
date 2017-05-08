@@ -16,22 +16,35 @@
 		<div class="row-fluid">	
 			<div class="span6">>
 				<legend>Publish A New Room Sharing</legend>
+				
 				<form action="../frontend/tenant.php?act=publish" method="post">
-					<p>
-						<label for="address" class="label">Address</label>
-						<input type="text" name="address" value="Address" class="left" />
-					<p/>
-					<p>
-						<label for="description" class="label">Description</label>
-						<input type="text" name="description" value="Description" class="left" />
-					<p/>
-					<p>
-						<label for="contact" class="label">Contact</label>
-						<input type="text" name="contact" value="Contact" class="left" />
-					<p/>
-					<p>
-						<input type="submit" name="publish" value="Publish" class="left" />
-					</p>
+					<?php 
+						$result = $con->query("select * from room where uid='".$_SESSION['uid']."';");
+						if($result->num_rows > 0){
+							echo "<p>You Have Published One Room Sharing Already!!!</p>";
+						}
+						else{
+							echo "
+							
+									<p>
+										<label for='address' class='label'>Address</label>
+										<input type='text' name='addres' value='Address' class='left' />
+									<p/>
+									<p>
+										<label for='description' class='label'>Description</label>
+										<input type='text' name='description' value='Description' class='left' />
+									<p/>
+									<p>
+										<label for='contact' class='label'>Contact</label>
+										<input type='text' name='contact' value='Contact' class='left' />
+									<p/>
+									<p>
+										<input type='submit' name='publish' value='Publish' class='left' />
+									</p>
+							
+							";// head of form tag needs the double quote to be effective!!!
+						}
+					?>
 				</form>
 			</div>
 			<div class="span6">>
@@ -80,7 +93,7 @@
 			<div class="span4">
 				<legend>Applications to Your Sharing</legend>
 				<!--<button><a href="../backend/tenant.php?act=close">Colse My Room Sharing</a></button>-->
-				<form action="../frontend/tenant.php?act=close" method="post"><input type="submit" value="Colse My Room Sharing" /></form>
+				<form action="../frontend/tenant.php?act=close" method="post"><input type="submit" value="Granted My Room Sharing" /></form>
 				<?php  
 					$sql="select `description`, `contact` from application where rid=(select `rid` from room where uid='".$_SESSION['uid']."');";
 					$result=$con->query($sql);
