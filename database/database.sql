@@ -53,3 +53,27 @@ INSERT INTO `color`(`color`) VALUES
 ("lightblue"),
 ("lightgreen"),
 ("yellow")
+
+
+DROP TABLE IF EXISTS `superkarlskrona`.`room`;
+
+CREATE TABLE `superkarlskrona`.`room`(
+  `rid` INT NOT NULL AUTO_INCREMENT,
+  `address` VARCHAR(250),
+  `description` VARCHAR(250),
+  `contact` VARCHAR(250),
+  `uid` int,
+  PRIMARY KEY(`rid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `superkarlskrona`.`application`;
+
+CREATE TABLE `superkarlskrona`.`application`(
+  `aid` INT NOT NULL AUTO_INCREMENT,
+  `description` VARCHAR(250),
+  `contact` VARCHAR(250),
+  `uid` int,
+  `rid` int,
+  PRIMARY KEY(`aid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

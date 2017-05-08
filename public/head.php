@@ -7,5 +7,4 @@
 	<link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
 	<script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>

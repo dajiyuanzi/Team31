@@ -31,7 +31,7 @@
 					  }
 
 						$pageTopic = "disabled";
-						$pageNews = "disabled";
+						$pageTenant = "disabled";
 
 						if ($page == "tenant") {
 								$pageTenant = "active";

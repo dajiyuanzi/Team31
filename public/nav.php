@@ -25,12 +25,17 @@
 				$pagePopular = "disabled";
 				$pageComment = "disabled";
 				$pageIndex = "disabled";
+				$pageTenant= "disabled";
 
 				if ($page == "popular") {
 						$pagePopular = "active";
 				} elseif ($page == "comment") {
 					$pageComment = "active";
-				} else {
+				} 
+				elseif ($page=="tenant") {
+					$pageTenant="active";
+				}
+				else {
 					$pageIndex = "active";
 				}
 
@@ -43,8 +48,11 @@
 				</li>
 				<li class="'.$pageComment.'">
 					<a href="index.php?page=comment">Most commented</a>
-				</li>';
-
+				</li>
+				<li class="'.$pageTenant.'">
+					<a href="../frontend/tenant.php">Tenant</a>
+				</li>
+				';
 
 
 			?>
@@ -61,7 +69,7 @@
 						<a href="../backend/register.php">Register</a>
 					</li>
 					<li>
-						<a href="../backend/login.php">Login</a>
+						<a href="../backend/login.php" id="login" >Login</a>
 					</li>
 					<li>
 						<a href="../frontend/yourself.php">Yourself</a>
