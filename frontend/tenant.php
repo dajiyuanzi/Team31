@@ -16,35 +16,15 @@
 		<div class="row-fluid">	
 			<div class="span6">>
 				<legend>Publish A New Room Sharing</legend>
-				
-				<form action="../frontend/tenant.php?act=publish" method="post">
 					<?php 
 						$result = $con->query("select * from room where uid='".$_SESSION['uid']."';");
 						if($result->num_rows > 0){
 							echo "<p>You Have Published One Room Sharing Already!!!</p>";
 						}
 						else{
-							echo "
-									<p>
-										<label for='address' class='label'>Address</label>
-										<input type='text' name='addres' value='Address' class='left' />
-									<p/>
-									<p>
-										<label for='description' class='label'>Description</label>
-										<input type='text' name='description' value='Description' class='left' />
-									<p/>
-									<p>
-										<label for='contact' class='label'>Contact</label>
-										<input type='text' name='contact' value='Contact' class='left' />
-									<p/>
-									<p>
-										<input type='submit' name='publish' value='Publish' class='left' />
-									</p>
-							
-							";// head of form tag needs the double quote to be effective!!!
+							require_once("../frontend/tenant_form.php");
 						}
-					?>
-				</form>
+					?>		
 			</div>
 			<div class="span6">>
 				<legend>Apply A Room Sharing</legend>
