@@ -25,7 +25,7 @@ CREATE TABLE `superkarlskrona`.`topic`(
   PRIMARY KEY(`tid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-alter table topic add COLUMN uid int; /*VITAL!!!!!!S*/
+alter table `superkarlskrona`.`topic` add COLUMN uid int; /*VITAL!!!!!!S*/
 
 
 DROP TABLE IF EXISTS `superkarlskrona`.`comment`;
@@ -48,11 +48,11 @@ CREATE TABLE `superkarlskrona`.`color`(
   PRIMARY KEY(`colorid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `color`(`color`) VALUES
+INSERT INTO `superkarlskrona`.`color`(`color`) VALUES
 ("lightpink"),
 ("lightblue"),
 ("lightgreen"),
-("yellow")
+("yellow");
 
 
 DROP TABLE IF EXISTS `superkarlskrona`.`room`;
