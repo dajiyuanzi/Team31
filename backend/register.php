@@ -25,6 +25,31 @@ if($username != "")
         if (!$con->query($sql)) {
             echo 'Mysql error: ' . mysql_error();
             exit;
+        } else {
+					if(isset($_POST['username'])&&isset($_POST['password'])){
+						$sql="select * from user where name='".$_POST['username']."' and code=".$_POST['password'].";";
+						$result=$con->query($sql) or die('MySQL Error: ' . mysqli_error());
+						$row=$result->fetch_assoc();
+
+						if (!$row) {
+							echo "<script>alert('Wrong username or password');</script>";
+						}
+						else{
+							if(!isset($_SESSION)){
+								session_start();
+						        $_SESSION['username']=$row['name'];
+						        $_SESSION['email']=$row['email'];
+						        $_SESSION['uid']=$row['uid'];
+						        $_SESSION['password']=$row['code'];
+						        if($_SESSION['username']=="admin"){
+						        	header("Location:../frontend/admin.php");
+						        }
+						        else{
+						        	header("Location:../frontend/index.php");
+						        }
+							}
+						}
+					}
         }
         header("Location:../frontend/index.php");
     }
