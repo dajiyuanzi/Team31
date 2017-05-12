@@ -33,7 +33,7 @@ $result = $con->query("select `comment` from comment where tid='".$tid."';");
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
       	echo "<div class='topicBox' style='background-color:$color;' >";
-      	echo "  <p>".$_SESSION["username"].":</p><br>";
+      	//echo "  <p>".$_SESSION["username"].":</p><br>";
       	echo "  <p>".htmlspecialchars($row["comment"])."</p><br>";
       	echo "</div>";
         echo "<br>";
