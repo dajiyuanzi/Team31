@@ -12,3 +12,10 @@
 .title {
   text-align: center;
 }
+
+.footer1{
+    text-align: center;
+    margin: 20px;
+    color: gray;
+    font-size: smaller;
+}
