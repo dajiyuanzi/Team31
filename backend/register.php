@@ -1,6 +1,10 @@
 <?php
 require_once('../database/db_con.php');
 
+$username = "";
+$email = "";
+$password = "";
+
 if(isset($_POST['username'])&&isset($_POST['email'])&&isset($_POST['password'])){
 	$username=$_POST['username'];
 	$email=$_POST['email'];
@@ -8,14 +12,14 @@ if(isset($_POST['username'])&&isset($_POST['email'])&&isset($_POST['password']))
 }
 
 
-if(!empty($username))
+if($username != "")
 {
     $result = $con->query("SELECT * FROM user WHERE name='".$username."';");
-    if ($result && $result->num_rows > 0) 
+    if ($result && $result->num_rows > 0)
     {
         echo "<script>alert('This username has bee used! Try another!');</script>";
     }
-    else 
+    else
     {
         $sql = "INSERT INTO user(name, email, code) VALUES ('".$username."', '".$email."', '".$password."');";
         if (!$con->query($sql)) {
