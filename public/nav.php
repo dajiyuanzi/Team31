@@ -3,12 +3,6 @@
 <div class="row-fluid">
 	<div class="span12">
 		<ul class="nav nav-tabs navbg">
-			<!--<li class="active">
-				<a href="login.php">Home</a>
-			</li>
-			<li>
-				<a href="index.php">Index</a>
-			</li>-->
 			<?php
 
 
@@ -31,7 +25,7 @@
 						$pagePopular = "active";
 				} elseif ($page == "comment") {
 					$pageComment = "active";
-				} 
+				}
 				elseif ($page=="tenant") {
 					$pageTenant="active";
 				}
