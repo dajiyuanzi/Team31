@@ -29,3 +29,10 @@ a:hover {
 	text-decoration: underline;
 }
 }
+
+.footer {
+    text-align: center;
+    margin: 20px;
+    color: gray;
+    font-size: smaller;
+}
