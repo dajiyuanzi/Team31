@@ -57,21 +57,40 @@ if($username != "")
 
 ?>
 
+<title>Register - Super Karlskrona</title>
+<link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
-<form action="../backend/register.php" method="post">
-	<p>
-		<label for="username" class="label">User Name:</label>
-		<input id="username" name="username" type="text" class="input" />
-	<p/>
-	<p>
-		<label for="email" class="label">Email</label>
-		<input id="email" name="email" type="email" class="input" />
-	<p/>
-	<p>
-		<label for="password" class="label">Password</label>
-		<input id="password" name="password" type="password" class="input" />
-	<p/>
-	<p>
-		<input type="submit" name="register" value="Register" class="left" />
-	</p>
-</form>
+<h1 class="title">Super Karlskrona</h1>
+
+<div class="log">
+	<div class="log1">
+		<div class="innerbut">
+			<button><a href="../frontend/index.php">Go Back</a></button>
+			<br>
+			<br>
+		</div>
+		<div class="innerLog">
+			Register
+			<form action="../backend/register.php" method="post">
+				<p>
+					<label for="username" class="label">Username:</label>
+					<br>
+					<input id="username" name="username" type="text" class="input" />
+				<p/>
+				<p>
+					<label for="email" class="label">Email</label>
+					<br>
+					<input id="email" name="email" type="email" class="input" />
+				<p/>
+				<p>
+					<label for="password" class="label">Password</label>
+					<br>
+					<input id="password" name="password" type="password" class="input" />
+				<p/>
+				<p>
+					<input type="submit" name="register" value="Register" class="left" />
+					<br>
+					<br>
+					Already a member? <a href="../backend/login.php">Login</a>
+				</p>
+			</form>

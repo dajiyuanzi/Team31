@@ -19,3 +19,24 @@
     color: gray;
     font-size: smaller;
 }
+
+.log{
+  text-align: center;
+}
+
+.log1 {
+  display: inline-block;
+}
+
+.innerLog{
+    text-align: left;
+    width: initial;
+    display: table-cell;
+    background: lightgrey;
+    padding: 30px;
+}
+
+
+.innerbut{
+    text-align: left;
+}

@@ -28,18 +28,38 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 
 ?>
 
-<legend>Login</legend>
-<form action="../backend/login.php" method="post">
-	<p>
-		<label for="username" class="label">User Name:</label>
-		<input id="username" name="username" type="text" class="input" />
-	<p/>
-	<p>
-		<label for="password" class="label">Password</label>
-		<input id="password" name="password" type="password" class="input" />
-	<p/>
-	<p>
-		<input type="submit" name="login" value="Login" class="left" />
-    <input type='button' value="Register" onclick="location.href='../backend/register.php'"/>
-	</p>
-</form>
+<title>Login - Super Karlskrona</title>
+<link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+<h1 class="title">Super Karlskrona</h1>
+
+<div class="log">
+	<div class="log1">
+		<div class="innerbut">
+			<button><a href="../frontend/index.php">Go Back</a></button>
+			<br>
+			<br>
+		</div>
+		<div class="innerLog">
+			Login
+			<form action="../backend/login.php" method="post">
+				<p>
+					<label for="username" class="label">Username:</label>
+					<br>
+					<input id="username" name="username" type="text" class="input" />
+				<p/>
+				<p>
+					<label for="password" class="label">Password</label>
+					<br>
+					<input id="password" name="password" type="password" class="input" />
+				<p/>
+				<p>
+					<input type="submit" name="login" value="Login" class="left" />
+					<br>
+					<br>
+					Not a member yet? <a href="../backend/register.php">Register</a>
+				</p>
+			</form>
+		</div>
+	 </div>
+  </div>
