@@ -13,12 +13,6 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<ul class="nav nav-tabs navbg">
-					<!--<li class="active">
-						<a href="login.php">Home</a>
-					</li>
-					<li>
-						<a href="indexLogedin.php">Index</a>
-					</li>-->
 					<?php
 					  $page = "";
 
