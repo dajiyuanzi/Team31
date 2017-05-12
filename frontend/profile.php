@@ -80,11 +80,10 @@ function validate(){
  
  	alert("The telephone number should be less than 15!");
      return false;
- }
+ }*/
    
     return true;
- }*/
- 
+ }
 </script>
 
 
