@@ -7,11 +7,11 @@
 
 	<?php
 		require_once('../public/head.php');
-		require_once('../public/nav.php');
+		require_once('../public/navLogedin.php');
 	?>
 	<div class="row-fluid">
-	<!--<form action="index.php"><input type="submit" value="Go back" /></form>-->
-    	<button><a href="../frontend/index.php">Go Back</a></button>
+	<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
+    	<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
 	<br/><br/>
     
     <script type="text/javascript" >

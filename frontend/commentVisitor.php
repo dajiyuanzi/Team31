@@ -7,18 +7,20 @@
 
 	<?php
 		require_once('../public/head.php');
-		require_once('../public/navLogedin.php');
+		require_once('../public/nav.php');
 	?>
 	<div class="row-fluid">
 	<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
-	<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
+	<button><a href="../frontend/index.php">Go Back</a></button>
+	<br/><br/>
+	<a href="../backend/login.php" id="login" >Login</a> / <a href="../backend/register.php">Register</a> to be able to comment on topics
+
 	<br/><br/>
 
-		<?php require_once('../backend/yourself.php'); ?>
+		<?php require_once('../backend/commentVisitor.php'); ?>
 
 		<br>
 		<br>
-		
-	
+		</div>
 	</div>
 </body>

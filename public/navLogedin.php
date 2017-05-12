@@ -35,13 +35,16 @@
 
 				echo
 				'<li class="'.$pageIndex.'">
-					<a href="index.php">All</a>
+					<a href="indexLogedin.php">All</a>
 				</li>
 				<li class="'.$pagePopular.'">
-					<a href="index.php?page=popular">Most popular</a>
+					<a href="indexLogedin.php?page=popular">Most popular</a>
 				</li>
 				<li class="'.$pageComment.'">
-					<a href="index.php?page=comment">Most commented</a>
+					<a href="indexLogedin.php?page=comment">Most commented</a>
+				</li>
+				<li class="'.$pageTenant.'">
+					<a href="../frontend/tenant.php">Tenant</a>
 				</li>
 				';
 
@@ -57,11 +60,16 @@
 					<li class="divider">
 					</li>
 					<li>
-						<a href="../backend/register.php">Register</a>
+						<a href="../frontend/yourself.php">Yourself</a>
+					</li>
+					<li>
+						<a href="../frontend/profile.php">Profile</a>
 					</li>
 					<?php require_once('../public/admin_jump.php'); ?>
+					<li class="divider">
+					</li>
 					<li>
-						<a href="../backend/login.php" id="login" >Login</a>
+						<a href="../backend/logout.php">Log Out</a>
 					</li>
 				</ul>
 			</li>

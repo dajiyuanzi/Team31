@@ -1,0 +1,49 @@
+<script type="text/javascript" src="../public/likedislike_ajax.js"></script>
+
+<?php
+include_once('../database/db_con.php');
+//require_once('../public/login_check.php');
+
+$tid=$_GET['tid'];
+//$uid=$_SESSION['uid'];
+
+$sql = 	"SELECT `tid`, `color`, `description`, `like`, `dislike` FROM `topic` where tid='".$tid."';";
+$color = "";
+$result = $con->query($sql);
+
+if ($result->num_rows > 0) {
+  while($row = $result->fetch_assoc()) {
+    echo "<div class='topicBox' style='background-color:".$row["color"].";' >";
+    echo "  <p><a href='../frontend/commentVisitor.php?tid=".$row['tid']."'>".htmlspecialchars($row["description"])."</a><br>Likes: <span id='liketid".$row['tid']."'>".$row["like"]."</span> Dislikes: <span id='disliketid".$row['tid']."'>".$row["dislike"]."</span></p>";
+    echo "  <div style='margin-left: 12px; display: inline-block; ' onclick='like(".$row['tid'].");'><img style='width: 30px;' src='../assets/images/up.png'></div>";
+    echo "  <div style='display: inline-block; width:20px;'></div>";
+    echo "  <div style='display: inline-block;'  onclick='dislike(".$row['tid'].");'><img style='width: 30px;' src='../assets/images/down.png'></div>";
+    echo "</div>";
+    $color = $row["color"];
+  }
+} else {
+  echo "Something went wrong!";
+}
+
+echo "<br><br><legend>Comments: </legend>";
+
+
+$result = $con->query("select `comment` from comment where tid='".$tid."';");
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      	echo "<div class='topicBox' style='background-color:$color;' >";
+      	echo "  <p>".$_SESSION["username"].":</p><br>";
+      	echo "  <p>".htmlspecialchars($row["comment"])."</p><br>";
+      	echo "</div>";
+        echo "<br>";
+    }
+}
+else {
+   	echo "<div class='topicBox' style='background-color:white;' >";
+    echo "  <p>No Comments</p><br>";
+    echo "</div>";
+}
+
+
+?>

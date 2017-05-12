@@ -77,3 +77,6 @@ CREATE TABLE `superkarlskrona`.`application`(
   `rid` int,
   PRIMARY KEY(`aid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/* create admin user */
+INSERT INTO `user`(`name`, `email`, `code`) VALUES ("admin", "dev@superkarlskrona.se", "admin" )

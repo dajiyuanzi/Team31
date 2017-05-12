@@ -7,7 +7,7 @@
 
 		<?php
 			require_once('../public/head.php');
-			require_once('../public/nav.php');
+			require_once('../public/navLogedin.php');
 		?>
 
 		<div class="row-fluid">
@@ -17,7 +17,7 @@
 						<a href="login.php">Home</a>
 					</li>
 					<li>
-						<a href="index.php">Index</a>
+						<a href="indexLogedin.php">Index</a>
 					</li>-->
 					<?php
 					  $page = "";
@@ -55,8 +55,8 @@
 
 
 		<div class="row-fluid">
-			<!--<form action="index.php"><input type="submit" value="Go back" /></form>-->
-			<button><a href="../frontend/index.php">Go Back</a></button>
+			<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
+			<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
 
 			<?php
 				$page ="";

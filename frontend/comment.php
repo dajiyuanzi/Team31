@@ -7,11 +7,11 @@
 
 	<?php
 		require_once('../public/head.php');
-		require_once('../public/nav.php');
+		require_once('../public/navLogedin.php');
 	?>
 	<div class="row-fluid">
-	<!--<form action="index.php"><input type="submit" value="Go back" /></form>-->
-	<button><a href="../frontend/index.php">Go Back</a></button>
+	<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
+	<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
 	<br/><br/>
 
 		<?php require_once('../backend/comment.php'); ?>
@@ -22,7 +22,7 @@
 		<form action="../frontend/comment.php?tid=<?php echo $tid; ?>" method="post">
 	  <p>
 				<label for="comment" class="label">Your Comment</label>
-				
+
 
 <form action="" method="post" name="Message" >
 <div class="team_r" style="width:380px">
@@ -75,11 +75,10 @@
 </div>
   <textarea id="comment" name="comment" type="input" class="input" style="width:100%;"rows="4" cols="50" mce_editable="true" onkeydown=gbcount(this.form.gb_word,this.form.total,this.form.used,this.form.remain); onkeyup=gbcount(this.form.gb_word,this.form.total,this.form.used,this.form.remain);></textarea>
 
-	  <p>		
+	  <p>
                 <input type="submit" name="login" value="Launch Comment" class="left" />
 			</p>
 		</form>
 	</div>
 	</div>
 </body>
-

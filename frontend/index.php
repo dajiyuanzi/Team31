@@ -9,35 +9,16 @@
 		<h1 class="title">Super Karlskrona</h1>
 		<?php require_once('../public/nav.php'); ?>
 		<div class="row-fluid">
-			<!--<div class="span2" style="background:yellow;">
-
-			</div>
-			<div class="span8">-->
 				<div class="addtopicbutton">
-					<button class="addtopic" onClick="$('.topicform').css('display', 'block'); $('.addtopicbutton').css('display', 'none');">Add topic</button>
+					<a href="../backend/login.php" id="login" >Login</a> / <a href="../backend/register.php">Register</a> to be able to add topics
 					<br><br>
 				</div>
-				<div style="display:none;" class="topicform">
 
-				  	<?php require_once('../backend/addtopic.php'); ?>
-
-				  	<form  action="index.php" name="topicfrom" id="topicform" method="POST">
-					   <label for="inputtext" class="label">Add your topic</label>
-					   <textarea form="topicform" id="inputtext" name="inputtext" style="width:100%;"rows="4" cols="50"></textarea>
-					   <input type="submit" value="Submit"></input>
-					   <button type="cancel" onClick="$('.topicform').css('display', 'none'); $('.addtopicbutton').css('display', 'block');">Cancel</button>
-					</form>
-				</div>
-				
-				<?php require_once('../backend/topics.php'); ?>
-			<!--</div>
-			<div class="span2" style="background:green;">
-
-			</div>-->
+				<?php require_once('../backend/topicsVisitor.php'); ?>
 		</div>
 	</div>
  <?php include_once 'qtdown.php';?>
-	
+
 	</body>
 	<br>
 	<br>

@@ -20,9 +20,9 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 	        	header("Location:../frontend/admin.php");
 	        }
 	        else{
-	        	header("Location:../frontend/index.php");
+	        	header("Location:../frontend/indexLogedin.php");
 	        }
-		}	
+		}
 	}
 }
 
@@ -39,7 +39,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 		<input id="password" name="password" type="password" class="input" />
 	<p/>
 	<p>
-		<input type="submit" name="login" value="login" class="left" />
-        <input type='button' value="regist" onclick="Regist.php"/>
+		<input type="submit" name="login" value="Login" class="left" />
+    <input type='button' value="Register" onclick="location.href='../backend/register.php'"/>
 	</p>
 </form>

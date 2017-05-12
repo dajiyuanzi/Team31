@@ -7,12 +7,12 @@
 
 		<?php
 			require_once('../public/head.php');
-			require_once('../public/nav.php');
+			require_once('../public/navLogedin.php');
 			require_once('../public/login_check.php');
 
 			require_once('../backend/tenant.php');
 		?>
-		<button><a href="../frontend/index.php">Go Back</a></button>
+		<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
 		<div class="row-fluid">	
 			<div class="span6">>
 				<legend>Publish A New Room Sharing</legend>

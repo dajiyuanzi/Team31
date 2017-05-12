@@ -45,13 +45,13 @@ if($username != "")
 						        	header("Location:../frontend/admin.php");
 						        }
 						        else{
-						        	header("Location:../frontend/index.php");
+						        	header("Location:../frontend/indexLogedin.php");
 						        }
 							}
 						}
 					}
         }
-        header("Location:../frontend/index.php");
+        header("Location:../frontend/indexLogedin.php");
     }
 }
 
@@ -72,6 +72,6 @@ if($username != "")
 		<input id="password" name="password" type="password" class="input" />
 	<p/>
 	<p>
-		<input type="submit" name="register" value="register" class="left" />
+		<input type="submit" name="register" value="Register" class="left" />
 	</p>
 </form>

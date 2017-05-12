@@ -64,7 +64,7 @@ function chk(theForm){
       <td colspan="2" align="center" bgcolor="#FFFFFF"><input type="reset" name="button" id="button" value="Reset" />
       <input type="submit" name="submit" id="submit" value="Regist" /></td>
 if($result)
-echo "<script>alert('Registered successfully');location='member.php';</script>";
+echo "<script>alert('Registered successfully'); //location='member.php';</script>";
 else
 {
 	echo "<script>alert('Fail');location='index.php';</script>";
