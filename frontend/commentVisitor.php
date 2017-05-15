@@ -11,7 +11,7 @@
 	?>
 	<div class="row-fluid">
 	<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
-	<button><a href="../frontend/index.php">Go Back</a></button>
+	<a href="../frontend/index.php"><button>Go Back</button></a>
 	<br/><br/>
 	<a href="../backend/login.php" id="login" >Login</a> / <a href="../backend/register.php">Register</a> to be able to comment on topics
 

@@ -65,7 +65,7 @@ if($username != "")
 <div class="log">
 	<div class="log1">
 		<div class="innerbut">
-			<button><a href="../frontend/index.php">Go Back</a></button>
+			<a href="../frontend/index.php"><button>Go Back</button></a>
 			<br>
 			<br>
 		</div>

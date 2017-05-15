@@ -12,11 +12,11 @@
 
 			require_once('../backend/tenant.php');
 		?>
-		<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
-		<div class="row-fluid">	
+		<a href="../frontend/indexLogedin.php"><button>Go Back</button></a>
+		<div class="row-fluid">
 			<div class="span6">>
 				<legend>Publish A New Room Sharing</legend>
-					<?php 
+					<?php
 						$result = $con->query("select * from room where uid='".$_SESSION['uid']."';");
 						if($result->num_rows > 0){
 							echo "<p>You Have Published One Room Sharing Already!!!</p>";
@@ -24,7 +24,7 @@
 						else{
 							require_once("../frontend/tenant_form.php");
 						}
-					?>		
+					?>
 			</div>
 			<div class="span6">>
 				<legend>Apply A Room Sharing</legend>
@@ -45,13 +45,13 @@
 						<input type="submit" name="Apply" value="Apply" class="left" />
 					</p>
 				</form>
-			</div>	
+			</div>
 		</div>
 
 		<div class="row-fluid">
 			<div class="span8">
 				<legend>Available Sharing</legend>
-				<?php 
+				<?php
 					$sql="select `rid`, `address`, `description`, `contact` from room;";
 					$result=$con->query($sql);
 
@@ -73,7 +73,7 @@
 				<legend>Applications to Your Sharing</legend>
 				<!--<button><a href="../backend/tenant.php?act=close">Colse My Room Sharing</a></button>-->
 				<form action="../frontend/tenant.php?act=close" method="post"><input type="submit" value="Granted My Room Sharing" /></form>
-				<?php  
+				<?php
 					$sql="select `description`, `contact` from application where rid=(select `rid` from room where uid='".$_SESSION['uid']."');";
 					$result=$con->query($sql);
 
@@ -92,6 +92,6 @@
 				?>
 			</div>
 		</div>
-		
+
 	</div>
 </body>

@@ -11,7 +11,7 @@
 	?>
 	<div class="row-fluid">
 	<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
-	<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
+	<a href="../frontend/indexLogedin.php"><button>Go Back</button></a>
 	<br/><br/>
 
 		<?php require_once('../backend/comment.php'); ?>

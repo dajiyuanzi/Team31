@@ -11,9 +11,9 @@
 	?>
 	<div class="row-fluid">
 	<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
-    	<button><a href="../frontend/indexLogedin.php">Go Back</a></button>
+    	<a href="../frontend/indexLogedin.php"><button>Go Back</button></a>
 	<br/><br/>
-    
+
     <script type="text/javascript" >
 function validate(){
  var username = document.getElementsByName("username")[0];
@@ -25,63 +25,63 @@ function validate(){
  if(username.value.length < 1){
      alert("Enter your new name please!");
      return false;
-    
+
  } else if(username.value.length > 10){
- 
+
  	alert("The new name should be less than 10!");
      return false;
  }
- 
+
    if(password.value.length < 1){
-    
+
      alert("Enter your new password please!");
      return false;
-    
+
   } else if(password.value.length > 20){
- 
+
  	alert("The password should be less than 20!");
      return false;
  }
     if(password2.value.length < 1){
-    
+
      alert("Enter your new password again please!");
      return false;
-     
-    
+
+
   } else if(password2.value.length > 20){
- 
+
  	alert("The password should be less than 20!");
      return false;
- } 
+ }
 
  if(password.value!=password2.value){
  	alert("The password input should be same!");
     return false;
  }
- 
+
   if(email.value.length < 1){
-    
+
      alert("Enter your new email please!");
      return false;
-    
+
  } else if(email.value.length > 20){
- 
+
  	input.password="";
  	alert("The email should be less than 20!");
     return false;
  }
- 
+
    /*if(phonenumber.value.length < 1){
-    
+
      alert("Enter your new phonenumber please!");
      return false;
-    
+
  } else if(phonenumber.value.length > 15){
- 
+
  	alert("The telephone number should be less than 15!");
      return false;
  }*/
-   
+
     return true;
  }
 </script>
@@ -117,6 +117,6 @@ function validate(){
 				<input type="submit" name="profile" value="Alter" class="left" />
 			</p>
 		</form>
-	
+
 	</div>
 </body>
