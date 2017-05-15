@@ -44,6 +44,7 @@ CREATE TABLE `superkarlskrona`.`comment`(
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*Don't need foreign keys*/
 
+alter table `superkarlskrona`.`comment` add COLUMN dateTimeStamp TIMESTAMP NOT NULL DEFAULT NOW();
 
 CREATE TABLE `superkarlskrona`.`color`(
   `colorid` INT NOT NULL AUTO_INCREMENT,
