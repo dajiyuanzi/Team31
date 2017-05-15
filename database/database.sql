@@ -29,7 +29,7 @@ CREATE TABLE `superkarlskrona`.`topic`(
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 alter table `superkarlskrona`.`topic` add COLUMN uid int; /*VITAL!!!!!!S*/
-alter table `superkarlskrona`.`topic` add COLUMN dateTimeStamp NOT NULL DEFAULT NOW();
+alter table `superkarlskrona`.`topic` add COLUMN dateTimeStamp TIMESTAMP NOT NULL DEFAULT NOW();
 
 DROP TABLE IF EXISTS `superkarlskrona`.`comment`;
 
