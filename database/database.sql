@@ -82,7 +82,7 @@ CREATE TABLE `superkarlskrona`.`application`(
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /* create admin user */
-INSERT INTO `user`(`name`, `email`, `code`) VALUES ("admin", "dev@superkarlskrona.se", "admin" );
+INSERT INTO `user`(`name`, `email`, `code`) VALUES ("admin", "dev@superkarlskrona.se", "1" );
 
 /* Create Procedure*/
 DROP PROCEDURE IF EXISTS add_topic;
