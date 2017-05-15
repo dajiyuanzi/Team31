@@ -37,8 +37,8 @@ CREATE TABLE `superkarlskrona`.`comment`(
   `cid` INT NOT NULL AUTO_INCREMENT,
   `tid` INT,
   `uid` INT,
-  `like` INT,
-  `dislike` INT,
+  `like` INT DEFAULT '0',
+  `dislike` INT DEFAULT '0',
   `comment` VARCHAR(250),
   PRIMARY KEY(`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -35,9 +35,9 @@
       echo "  <div style=''>".$row["dateTimeStamp"]."</div>";
       echo "  <p><a href='../frontend/comment.php?tid=".$row['tid']."'>".htmlspecialchars($row["description"])."</a><br>Likes: <span id='liketid".$row['tid']."'>".$row["like"]."</span> Dislikes: <span id='disliketid".$row['tid']."'>".$row["dislike"]."</span> Popularity: <span id='popularityid".$row['tid']."'>$popularity</span>";
       echo "  Comments: <span id='commentid".$row['tid']."'>".$row['comments']."</span></p>";
-      echo "  <div style='margin-left: 12px; display: inline-block; ' onclick='like(".$row['tid'].");'><img style='width: 30px;' src='../assets/images/up.png'></div>";
+      echo "  <div style='margin-left: 12px; display: inline-block; cursor: pointer;' onclick='like(".$row['tid'].");'><img style='width: 30px;' src='../assets/images/up.png'></div>";
       echo "  <div style='display: inline-block; width:20px;'></div>";
-      echo "  <div style='display: inline-block;'  onclick='dislike(".$row['tid'].");'><img style='width: 30px;' src='../assets/images/down.png'></div>";
+      echo "  <div style='display: inline-block; cursor: pointer;'  onclick='dislike(".$row['tid'].");'><img style='width: 30px;' src='../assets/images/down.png'></div>";
       echo "</div>";
     }
   } else {
