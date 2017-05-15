@@ -1,3 +1,7 @@
+-- test proc
+ CALL add_topic('message', 1, @return);
+ SELECT @return;
+
 INSERT INTO `topic`(`tid`, `name`, `like`, `dislike`, `color`, `description`, `code`) VALUES
 (1,"me1",1,7, "lightpink", "test topic 1", "1"),
 (2,"me2",2,6, "lightblue", "test topic 2", "2"),
