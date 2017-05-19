@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS `superkarlskrona`.`user`;
 CREATE TABLE `superkarlskrona`.`user`(
   `uid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(250),
+  `birthday` VARCHAR(250),
   `email` VARCHAR(250),
   `code` VARCHAR(250),
   PRIMARY KEY(`uid`)
@@ -85,8 +86,10 @@ CREATE TABLE `superkarlskrona`.`application`(
 /* create admin user */
 INSERT INTO `user`(`name`, `email`, `code`) VALUES ("admin", "dev@superkarlskrona.se", "1" );
 
+
 /* Create Procedure*/
 DROP PROCEDURE IF EXISTS add_topic;
+
 
 DELIMITER //
 CREATE PROCEDURE add_topic (
