@@ -88,11 +88,11 @@ INSERT INTO `superkarlskrona`.`user`(`name`, `email`, `code`) VALUES ("admin", "
 
 
 /* Create Procedure*/
-DROP PROCEDURE IF EXISTS add_topic;
+DROP PROCEDURE IF EXISTS `superkarlskrona`.add_topic;
 
 
 DELIMITER //
-CREATE PROCEDURE add_topic (
+CREATE PROCEDURE `superkarlskrona`.add_topic (
 	  _topic VARCHAR(250),
       _uid int,
     OUT output VARCHAR(500)
