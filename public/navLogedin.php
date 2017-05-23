@@ -19,17 +19,12 @@
 				$pagePopular = "disabled";
 				$pageComment = "disabled";
 				$pageIndex = "disabled";
-				$pageTenant= "disabled";
 
 				if ($page == "popular") {
 						$pagePopular = "active";
 				} elseif ($page == "comment") {
 					$pageComment = "active";
-				}
-				elseif ($page=="tenant") {
-					$pageTenant="active";
-				}
-				else {
+				} else {
 					$pageIndex = "active";
 				}
 
@@ -42,9 +37,6 @@
 				</li>
 				<li class="'.$pageComment.'">
 					<a href="indexLogedin.php?page=comment">Most commented</a>
-				</li>
-				<li class="'.$pageTenant.'">
-					<a href="../frontend/tenant.php">Tenant</a>
 				</li>
 				';
 
@@ -64,6 +56,9 @@
 					</li>
 					<li>
 						<a href="../frontend/profile.php">Profile</a>
+					</li>
+					<li>
+							<a href="../frontend/tenant.php">Advert</a>
 					</li>
 					<?php require_once('../public/admin_jump.php'); ?>
 					<li class="divider">

@@ -25,11 +25,7 @@
 						$pagePopular = "active";
 				} elseif ($page == "comment") {
 					$pageComment = "active";
-				}
-				elseif ($page=="tenant") {
-					$pageTenant="active";
-				}
-				else {
+				} else {
 					$pageIndex = "active";
 				}
 
