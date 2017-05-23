@@ -7,6 +7,25 @@
   height: 100px;
   padding: 10px;
   margin: 0;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+}
+
+.adBox{
+  height: 100px;
+  padding: 10px;
+  margin: 0;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  display: block;
+
+}
+
+.sidepanel{
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: lightgray;
+  padding-left: 21px;
 }
 
 .title {
