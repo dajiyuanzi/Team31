@@ -1,6 +1,7 @@
 <script type="text/javascript" src="../public/likedislike_ajax.js"></script>
 <script type="text/javascript" src="../public/likedislikeComment_ajax.js"></script>
 
+
 <?php
 include_once('../database/db_con.php');
 require_once('../public/login_check.php');
@@ -27,7 +28,7 @@ if ($result->num_rows > 0) {
   echo "Something went wrong!";
 }
 
-echo "<br><br><legend>Comments: </legend>";
+echo "<br><legend>Comments: </legend>";
 
 
 $result = $con->query("select `cid`, `comment`, `like`, `dislike`, `dateTimeStamp` from comment where tid='".$tid."';");
@@ -43,7 +44,6 @@ if ($result->num_rows > 0) {
         echo "  <div style='display: inline-block; width:20px;'></div>";
         echo "  <div style='display: inline-block; cursor: pointer;'  onclick='dislikeComment(".$row['cid'].");'><img style='width: 30px;' src='../assets/images/down.png'></div>";
       	echo "</div>";
-        echo "<br>";
     }
 }
 else {
@@ -59,7 +59,9 @@ if(isset($_POST['comment'])&&!empty($_POST['comment'])){
         echo 'Mysql error: ' . mysql_error();
         exit;
     }
-    header("Location:../frontend/comment.php?tid=".$tid."");
+    //header("Location:../frontend/comment.php?tid=".$tid."");
+		//replace with below to fix header already sent issue
+		echo("<script>location.href = '../frontend/comment.php?tid=".$tid."';</script>");
 }
 
 ?>

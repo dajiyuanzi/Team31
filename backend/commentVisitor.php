@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
   echo "Something went wrong!";
 }
 
-echo "<br><br><legend>Comments: </legend>";
+echo "<br><legend>Comments: </legend>";
 
 
 $result = $con->query("select `cid`, `comment`, `like`, `dislike`, `dateTimeStamp` from comment where tid='".$tid."';");
@@ -43,7 +43,6 @@ if ($result->num_rows > 0) {
         echo "  <div style='display: inline-block; width:20px;'></div>";
         echo "  <div style='display: inline-block; cursor: pointer;'  onclick='dislikeComment(".$row['cid'].");'><img style='width: 30px;' src='../assets/images/down.png'></div>";
       	echo "</div>";
-        echo "<br>";
     }
 }
 else {
