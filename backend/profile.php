@@ -9,6 +9,7 @@
 	    while($row = $result->fetch_assoc()) {
 	    	echo "<p>Your Current Name:".$row['name']."</p><br>";
 	    	echo "<p>Your Current Email: ".$row['email']."</p><br>";
+	    	echo "<p>Your Birthday: ".$row['birthday']."</p><br>";
 	    }
 	}
 
@@ -31,8 +32,14 @@
 		@$con->query("update user set code='".$_POST['password']."' where uid='".$uid."';") or die('MySQL Error: ' . mysqli_error());
 	}
 
-	if(empty($_POST['username'])&&empty($_POST['email'])&&empty($_POST['password'])){
-		echo "<script>alert('Please enter something!');</script>";
+	if(!empty($_POST['birthday'])){
+		@$con->query("update user set birthday='".$_POST['birthday']."' where uid='".$uid."';") or die('MySQL Error: ' . mysqli_error());
 	}
+
+	/*f(empty($_POST['username'])&&empty($_POST['email'])&&empty($_POST['password'])){
+		echo "<script>alert('Please enter something!');</script>";
+	}*/
+
+
 
 ?>

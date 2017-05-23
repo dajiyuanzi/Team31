@@ -10,7 +10,6 @@
 		require_once('../public/navLogedin.php');
 	?>
 	<div class="row-fluid">
-	<!--<form action="indexLogedin.php"><input type="submit" value="Go back" /></form>-->
     	<a href="../frontend/indexLogedin.php"><button>Go Back</button></a>
 	<br/><br/>
 
@@ -20,7 +19,6 @@ function validate(){
  var password = document.getElementsByName("password")[0];
  var password2 = document.getElementsByName("password2")[0];
  var email = document.getElementsByName("email")[0];
- var phonenumber = document.getElementsByName("phonenumber")[0];
 
  if(username.value.length < 1){
      alert("Enter your new name please!");
@@ -70,18 +68,6 @@ function validate(){
  	alert("The email should be less than 20!");
     return false;
  }
-
-   /*if(phonenumber.value.length < 1){
-
-     alert("Enter your new phonenumber please!");
-     return false;
-
- } else if(phonenumber.value.length > 15){
-
- 	alert("The telephone number should be less than 15!");
-     return false;
- }*/
-
     return true;
  }
 </script>
@@ -109,10 +95,10 @@ function validate(){
 				<label for="email" class="label">New Email</label>
 				<input id="email" name="email" type="email" class="input" />
 		  	<p/>
-            <!--<p>
-				<label for="phonenumber" class="label">New Phone number</label>
-				<input id="phonenumber" name="phonenumber" type="phonenumber" class="input" />
-			<p/>-->
+			<p>
+				<label for="birthday" class="label">Change birthday</label>
+				<input id="birthday" type="date" name="birthday" />
+		  <p/>
 			<p>
 				<input type="submit" name="profile" value="Alter" class="left" />
 			</p>
