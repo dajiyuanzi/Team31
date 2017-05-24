@@ -11,7 +11,7 @@ if(isset($_GET['act'])&&$_GET['act']=="publish"){
 		echo "<script language=JavaScript> location.replace(location.href);</script>";
 	}
 	else{
-		echo "<script>alert('Please Fill Form');</script>";
+		//echo "<script>alert('Please Fill Form');</script>";
 	}
 }
 elseif(isset($_GET['act'])&&$_GET['act']=="apply") {
@@ -28,20 +28,17 @@ elseif(isset($_GET['act'])&&$_GET['act']=="apply") {
 		}
 	}
 	else{
-		echo "<script>alert('Please Fill Form');</script>";
-	}	
+		//echo "<script>alert('Please Fill Form');</script>";
+	}
 }
 elseif(isset($_GET['act'])&&$_GET['act']=="close") {
 	$con->query("delete from application where rid=(select rid from room where uid='".$_SESSION['uid']."');") or die('MySQL Error: ' . mysqli_error());
 	// room has to be deleted later or application cannot be deleted!!!!
 	$con->query("delete from room where uid='".$_SESSION['uid']."';") or die('MySQL Error: ' . mysqli_error());
-	
+
 	unset($_GET['act']);
 	header("Location:../frontend/tenant.php");
 }
 
 
 ?>
-
-
-

@@ -43,7 +43,7 @@
 								<br><br>
 							</div>
 
-							<?php require_once('../backend/advert.php'); ?>
+							<?php require_once('../backend/advertVisitor.php'); ?>
 
 				</div>
 

@@ -7,7 +7,6 @@
 
 		<?php
 			require_once('../public/head.php');
-			require_once('../public/navLogedin.php');
 		?>
 
 		<div class="row-fluid">
@@ -36,13 +35,26 @@
 
 						echo
 						'<li class="'.$pageTopic.'">
-							<a href="../frontend/admin.php">Topic Management</a>
+							<a href="../frontend/admin.php">Topic management</a>
 						</li>
 						<li class="'.$pageTenant.'">
-							<a href="../frontend/admin.php?page=tenant">Tenant Management</a>
+							<a href="../frontend/admin.php?page=tenant">Advert management</a>
 						</li>
 						';
 					?>
+
+					<li class="dropdown pull-right">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">Menu<strong class="caret"></strong></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="../frontend/logmode.html">Main frame</a>
+							<li class="divider">
+							</li>
+							<li>
+								<a href="../backend/logout.php">Log Out</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>

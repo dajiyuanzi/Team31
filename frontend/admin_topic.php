@@ -5,11 +5,11 @@
 			</table>
 
 			<br>
-			
+
 			<legend>Delete Comment</legend>
 			<form method="post" action="../frontend/admin.php">
 				<p>
-					<label for="username" class="label">ID of Topic to Delete:</label>
+					<label for="username" class="label">Id of topic to delete:</label>
 					<input id="username" name="tid" type="text" class="input" />
 				<p/>
 					<input type="submit" name="profile" value="Delete" class="left" />

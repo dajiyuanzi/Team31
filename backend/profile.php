@@ -21,24 +21,30 @@
 	    }
 		else{
 			@$con->query("update user set name='".$_POST['username']."' where uid='".$uid."';") or die('MySQL Error: ' . mysqli_error());
+			echo("<script>location.href = '../frontend/profile.php';</script>");
 		}
 	}
 
 	if(!empty($_POST['email'])){
 		@$con->query("update user set email='".$_POST['email']."' where uid='".$uid."';") or die('MySQL Error: ' . mysqli_error());
+		echo("<script>location.href = '../frontend/profile.php';</script>");
 	}
 
 	if(!empty($_POST['password'])){
 		@$con->query("update user set code='".$_POST['password']."' where uid='".$uid."';") or die('MySQL Error: ' . mysqli_error());
+		echo("<script>location.href = '../frontend/profile.php';</script>");
 	}
 
 	if(!empty($_POST['birthday'])){
 		@$con->query("update user set birthday='".$_POST['birthday']."' where uid='".$uid."';") or die('MySQL Error: ' . mysqli_error());
+		echo("<script>location.href = '../frontend/profile.php';</script>");
 	}
 
 	/*f(empty($_POST['username'])&&empty($_POST['email'])&&empty($_POST['password'])){
 		echo "<script>alert('Please enter something!');</script>";
 	}*/
+
+
 
 
 

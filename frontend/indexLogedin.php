@@ -38,7 +38,7 @@
 							<?php
 								echo "Today is " . date("l") . " " . date("Y-m-d") . "<br>";
 							?>
-							
+
 							<br>
 							<a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
 							<!--
@@ -61,8 +61,13 @@
 									<?php
 										$result = $con->query("select * from room where uid='".$_SESSION['uid']."';");
 										if($result->num_rows > 0){
-											echo "<p>You have published an advert already, check your advert page for more information.</p>";
-											echo " <button onClick='$('.tenantform').css('display', 'none'); $('.addtenantbutton').css('display', 'block');'>Cancel</button><br><br>";
+											echo "<p>You have published an advert already, check your
+											<a href='../frontend/tenant.php'>advert page</a> for more information.</p>";
+
+											$innerbut3 = "$('.tenantform').css('display', 'none'); $('.addtenantbutton').css('display', 'block');";
+											$but3 = ' <button onClick="'.$innerbut3.'">Cancel</button><br><br>';
+											echo $but3;
+
 										}
 										else{
 											echo '<form action="../frontend/tenant.php?act=publish" name="tenantfrom" id="tenantform" method="post">
@@ -80,7 +85,11 @@
 																<p/>
 																<p>
 																	<input type="submit" value="Submit" name="publish" class="left" />';
-																echo " <button type='cancel' onClick='$('.tenantform').css('display', 'none'); $('.addtenantbutton').css('display', 'block');'>Cancel</button>
+
+																	$innerbut4 = "$('.tenantform').css('display', 'none'); $('.addtenantbutton').css('display', 'block');";
+																	$but4 = " <button type='cancel' onClick='".$innerbut4."'>Cancel</button>";
+																	echo $but4;
+																echo "
 																</p>
 											</form>";
 										}
@@ -92,6 +101,10 @@
 							</div>
 
 							<?php require_once('../backend/advert.php'); ?>
+
+							<br>
+							<br>
+							<a href="../frontend/tenant.php">Advert page</a>
 
 				</div>
 
