@@ -88,10 +88,6 @@ function validate(){
 				<input id="password" name="password" type="password" class="input" />
 			<p/>
             <p>
-				<label for="confirm password" class="label">Confirm Password</label>
-				<input id="confirm password" name="password2" type="password" class="input" />
-			<p/>
-            <p>
 				<label for="email" class="label">New Email</label>
 				<input id="email" name="email" type="email" class="input" />
 		  	<p/>
