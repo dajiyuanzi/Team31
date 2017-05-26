@@ -8,4 +8,6 @@
     Images from web <br>
     <?php echo date("Y-m-d");?>
   </div>
+
+  <img src="../assets/images/footer.png" style="height: 170px; width: 100%;">
 </html>
