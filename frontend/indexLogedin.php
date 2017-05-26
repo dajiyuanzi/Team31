@@ -24,9 +24,57 @@
 
 				  	<form  action="indexLogedin.php" name="topicfrom" id="topicform" method="POST">
 					   <label for="inputtext" class="label">Add your topic</label>
+						 <div class="team_r" style="width:380px">
+						   <p><img src="../assets/images/images/01.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[-_-] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/02.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[@o@] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/03.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[-|-] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/04.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[o_o] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/05.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[ToT] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/06.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[*_*] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/07.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[-x-] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/08.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[-_-zz] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/09.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[t_t] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/10.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[-_-!] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/11.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:,] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/12.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:P] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/13.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:D] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/14.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:)] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/15.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:(] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/16.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:O] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/17.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:#] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/18.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:Z] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/19.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:0=] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/20.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[/:P] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/21.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:$] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/22.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[-.-] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/23.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[/-_-] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/24.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:{] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/25.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[zz] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/26.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[|-_-|] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/27.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[-_-||] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/28.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:.] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/29.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:-Q] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/30.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[9_9] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/31.gif" width="20" height="20" onClick="document.forms[0].inputtext.value+='[:,.] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/32.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:?] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/33.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:-|] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/34.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:K] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/35.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:G] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/36.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:L] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/37.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:c] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/38.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:q] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/39.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[:Y] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/40.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[/gs] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/41.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[/sg] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/42.gif" awidth="20" height="19" onClick="document.forms[0].inputtext.value+='[/hp] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/43.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[/ok] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/44.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[/rain] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						       <img src="../assets/images/images/45.gif" width="19" height="19" onClick="document.forms[0].inputtext.value+='[/yin] ';document.forms[0].inputtext.focus()" style="cursor:hand">
+						     </p>
+						 </div>
 					   <textarea form="topicform" id="inputtext" name="inputtext" style="width:100%;"rows="4" cols="50"></textarea>
 					   <input type="submit" value="Submit"></input>
-					   <button type="cancel" onClick="$('.topicform').css('display', 'none'); $('.addtopicbutton').css('display', 'block');">Cancel</button>
+	 							<button type="button" onClick="$('.topicform').css('display', 'none'); $('.addtopicbutton').css('display', 'block');">Cancel</button>
 					</form>
 				</div>
 
