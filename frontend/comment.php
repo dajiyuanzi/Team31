@@ -1,9 +1,9 @@
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
 <body class="bg1">
-	<div class="container-fluid">
 
-		<h1 class="title">Super Karlskrona</h1>
+		<img src="../assets/images/header.png" style="height: 170px; width: 100%;">
+	<div class="container-fluid">
 
 	<?php
 		require_once('../public/head.php');
@@ -81,4 +81,5 @@
 		</form>
 	</div>
 	</div>
+	 <?php include_once 'qtdown.php';?>
 </body>

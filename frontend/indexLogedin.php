@@ -6,9 +6,10 @@
 
 	<script type="text/javascript" src="../public/likedislike_ajax.js"></script>
 	<body class="bg1">
+
+			<img src="../assets/images/header.png" style="height: 170px; width: 100%;">
 	<div class="container-fluid">
 
-		<h1 class="title">Super Karlskrona</h1>
 		<?php require_once('../public/navLogedin.php'); ?>
 		<div class="row-fluid">
 			<div class="span9">
@@ -113,6 +114,4 @@
  <?php include_once 'qtdown.php';?>
 
 	</body>
-	<br>
-	<br>
 </html>
