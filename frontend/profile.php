@@ -2,7 +2,12 @@
 
 <body class="bg1">
 
-	<img src="../assets/images/header.png" style="height: 170px; width: 100%;">
+	<img src="../assets/images/header2.png" style="height: 170px; width: 100%;">
+<div style="text-align: center;
+  font-size: 40px;
+  padding: 19px;
+  font-weight: 800;
+  color: hotpink;">Super Karlskrona</div>
 	<div class="container-fluid">
 
 	<?php
